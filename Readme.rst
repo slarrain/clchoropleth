@@ -146,7 +146,6 @@ Returns:
 
 **run**
 
-``def run(data, filename, region, colors='orange', bins=5, quantile=False):
-``
+``def run(data, filename, region, colors='orange', bins=5, quantile=False):``
 
 Is a wrapper function that runs all the other functions of the module, except for 'preapare_data'. Doesn't return anything.
