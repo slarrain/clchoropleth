@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from clchoropleth.add_comuna_code_to_svg import load_file, parse_svg, save
 import clcomuna
+from pkg_resources import resource_filename # For the right filename
+
 
 orange = ['#feedde','#fdbe85','#fd8d3c','#e6550d','#a63603']
 blue = ['#eff3ff','#bdd7e7','#6baed6','#3182bd','#08519c']
@@ -93,7 +95,12 @@ def make_map(data, filename, region, colors='orange'):
         It saves the map. No return valule.
     '''
     assert isinstance (region, str), ('"region" parameter needs to a "string"')
-    svg = load_file('svgs/'+region+'.svg')
+
+    # This is so it gets the correct path+filename and
+    # it actually works
+    filename = resource_filename(__name__, 'svgs/'+region+'.svg')
+
+    svg = load_file(filename)
     paths, soup = parse_svg(svg)
     if type(colors) == str:
         colors = colors5[colors]
