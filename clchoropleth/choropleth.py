@@ -6,7 +6,7 @@
 
 from bs4 import BeautifulSoup
 import pandas as pd
-from add_comuna_code_to_svg import load_file, parse_svg, save
+from clchoropleth.add_comuna_code_to_svg import load_file, parse_svg, save
 import clcomuna
 
 orange = ['#feedde','#fdbe85','#fd8d3c','#e6550d','#a63603']
