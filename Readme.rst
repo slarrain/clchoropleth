@@ -1,5 +1,7 @@
+.. image:: https://img.shields.io/pypi/v/clchoropleth.svg
+    :target: https://pypi.python.org/pypi/clchoropleth
 
-CLCHOROPLETH
+clChoropleth
 ============
 
 It creates a SVG Choropleth of a Chilean region. 
