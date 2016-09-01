@@ -1,0 +1,3 @@
+include Readme.rst
+include choropleth/svgs/*.svg
+include arica.png
