@@ -98,9 +98,9 @@ def make_map(data, filename, region, colors='orange'):
 
     # This is so it gets the correct path+filename and
     # it actually works
-    filename = resource_filename(__name__, 'svgs/'+region+'.svg')
+    file_name = resource_filename(__name__, 'svgs/'+region+'.svg')
 
-    svg = load_file(filename)
+    svg = load_file(file_name)
     paths, soup = parse_svg(svg)
     if type(colors) == str:
         colors = colors5[colors]
