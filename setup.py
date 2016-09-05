@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name='clchoropleth',
-      version='1.2',
+      version='1.3',
       description='Creates SVG choropleths of Chilean regions',
       url='http://github.com/slarrain/clchoropleth',
       author='Santiago Larrain',

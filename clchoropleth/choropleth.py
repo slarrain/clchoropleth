@@ -123,3 +123,13 @@ def run(data, filename, region, colors='orange', bins=5, quantile=False):
     Wrapper function that runs all other functions
     '''
     make_map(discretize(select_comunas_from_region(data, region), bins, quantile), filename, region, colors)
+
+def run_for_all(data, prefix, colors='orange', bins=5, quantile=False):
+    '''Creates a choropleth for each of the regions
+    '''
+    for n in range(1,16):
+        if n<10:
+            region = '0'+str(n)
+        else:
+            region = str(n)
+        run(data, prefix+region+".svg", region, colors, bins, quantile)
